@@ -1,4 +1,4 @@
 ---
-title: Hearthstone and Games
+title: mtgdeckbuilder
 template: index.jade
 ---
