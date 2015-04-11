@@ -6,7 +6,7 @@ var cards = {
             url: "https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire",
             success: function(data) {
                 if (data){
-                    console.log(data);
+                    console.log("ExampleData: ", data);
                         $.get("/mtgdeckbuilder/cards/list.jade", function(template) {
                         var html = jade.render(template, {
                             data: data
@@ -21,10 +21,10 @@ var cards = {
     searchByName: function(name) {
         $.ajax({
             type:"GET",
-            url: "https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire",
+            url: "https://api.deckbrew.com/mtg/cards?name=" + name,
             success: function(data) {
                 if (data){
-                    //console.log(data);
+                    console.log("SearchData: ", data);
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
                         var html = jade.render(template, {
                             data: data
@@ -42,7 +42,7 @@ var cards = {
             $("#searchdiv").html(html);
         })
         
-        // list all cards
+        // list cards
         cards.listCards();
     }
 }
