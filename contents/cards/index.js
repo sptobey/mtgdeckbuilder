@@ -132,9 +132,6 @@ var cards = {
             url: query,
             success: function(data) {
                 if (data){
-                    //console.log(data);
-                    console.log(name)
-                    console.log(cards.onProcess(white) , cards.onProcess(blue) , cards.onProcess(black))
                     console.log("SearchData: ", data);
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
                         var html = jade.render(template, {

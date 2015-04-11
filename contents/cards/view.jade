@@ -2,12 +2,11 @@ h3 Results
 table.table.table-striped
     thead
         tr
-            th ID
+            th
     tbody
-
-        tr
-            td
-                data.id
+        each item in data
+            tr
+                img(src="https://api.mtgdb.info/content/hi_res_card_images/" + item.editions[0].multiverse_id + ".jpg", height=280)
 
 
 
