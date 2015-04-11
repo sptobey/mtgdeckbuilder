@@ -18,13 +18,20 @@ var cards = {
         });
     },
     
-    searchByName: function(name) {
+    onProcess: function(check){
+        return check[0].checked
+    },
+    
+    searchByName: function(name, white, blue, black, red, green, colorless, cmc, type) {
         $.ajax({
             type:"GET",
             url: "https://api.deckbrew.com/mtg/cards?name=" + name,
             success: function(data) {
                 if (data){
-                    console.log("SearchData: ", data);
+                    //console.log(data);
+                        console.log(name)
+                        console.log(cards.onProcess(white) , cards.onProcess(blue) , cards.onProcess(black))
+                    //    console.log("SearchData: ", data);
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
                         var html = jade.render(template, {
                             data: data

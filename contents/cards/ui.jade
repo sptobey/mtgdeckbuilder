@@ -5,4 +5,30 @@ h5 Search
             label Cards
             input#card.form-control(type='text', required='')
     .col-md-4
-        button.btn.btn-primary(onClick='cards.searchByName($("#card").val())') Search
+        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#colorless").on(), $("#cmc").val(), $("#type").val())') Search
+.row
+    .col-md-1
+        label White  
+            input#white.checkbox(type='checkbox')
+    .col-md-1
+        label Blue  
+            input#blue.checkbox(type='checkbox')
+    .col-md-1
+        label Black  
+            input#black.checkbox(type='checkbox')
+    .col-md-1
+        label Red  
+            input#red.checkbox(type='checkbox')
+    .col-md-1
+        label Green  
+            input#green.checkbox(type='checkbox')
+    label Coloress  
+        input#colorless.checkbox(type='checkbox')
+.row
+    .col-md-4
+        label Converted Mana Cost
+            input#cmc(type='text', required='')
+    .col-md-8
+        label Type
+            input#type(type='text', required='')
+                
