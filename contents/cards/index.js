@@ -1,12 +1,12 @@
 var cards = {
 
-    listCards: function() {
+    randomCard: function() {
         $.ajax({
             type: "GET",
-            url: "https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire",
+            url: "https://api.mtgdb.info/cards/random",
             success: function(data) {
                 if (data){
-                    console.log("ExampleData: ", data);
+                    console.log("RandomCard: ", data);
                         $.get("/mtgdeckbuilder/cards/list.jade", function(template) {
                         var html = jade.render(template, {
                             data: data
@@ -21,6 +21,7 @@ var cards = {
     searchByName: function(name) {
         $.ajax({
             type:"GET",
+            //"http://api.mtgdb.info/search/" + name
             url: "https://api.deckbrew.com/mtg/cards?name=" + name,
             success: function(data) {
                 if (data){
@@ -43,6 +44,6 @@ var cards = {
         })
         
         // list cards
-        cards.listCards();
+        cards.randomCard();
     }
 }
