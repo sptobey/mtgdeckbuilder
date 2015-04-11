@@ -5,7 +5,7 @@ h5 Search
             label Cards
             input#card.form-control(type='text', required='')
     .col-md-4
-        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#colorless").on(), $("#cmc").val(), $("#type").val())') Search
+        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#colorless").on(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
 .row
     .col-md-1
         label White  
@@ -22,13 +22,19 @@ h5 Search
     .col-md-1
         label Green  
             input#green.checkbox(type='checkbox')
-    label Coloress  
-        input#colorless.checkbox(type='checkbox')
+    // Because deckbrew is dumb, no colorless
 .row
     .col-md-4
-        label Converted Mana Cost
-            input#cmc(type='text', required='')
-    .col-md-8
+        label Format
+            select#type
+                option(value='') Any
+                option(value='standard') Standard
+                option(value='legacy') Legacy
+                option(value='vintage') Vintage
+                option(value='commander') Commander
+                option(value='modern') Modern
+                
+    .col-md-6
         label Type
             select#type
                 option(value='') Any
@@ -44,4 +50,48 @@ h5 Search
                 option(value='sorcery') Sorcery
                 option(value='tribal') Tribal
                 option(value='vanguard') Vanguard
-                
+.row
+    .col-md-4
+        label Supertype
+            select#supertype
+                option(value='') Any
+                option(value='basic') Basic
+                option(value='ongoing') Ongoing
+                option(value='snow') Snow
+                option(value='world') World
+    .col-md-4
+        label Converted Mana Cost
+            select#cmc
+                option(value='') Any
+                option(value=0) 0
+                option(value=1) 1
+                option(value=2) 2
+                option(value=3) 3
+                option(value=4) 4
+                option(value=5) 5
+                option(value=6) 6
+                option(value=7) 7
+                option(value=8) 8
+                option(value=9) 9
+                option(value=10) 10
+                option(value=11) 11
+                option(value=12) 12
+                option(value=13) 13
+                option(value=14) 14
+                option(value=15) 15
+                option(value=16) 16
+                option(value=17) 17
+                option(value=18) 18
+                option(value=19) 19
+                option(value=20) 20
+                option(value=1000000) 1000000
+            
+.row
+    .col-md-4
+        label Rarity
+            select#rarity
+                option(value='') Any
+                option(value='common') Common
+                option(value='uncommon') Uncommon
+                option(value='rare') Rare
+                option(value='mythic') Mythic Rare
