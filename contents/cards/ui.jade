@@ -30,5 +30,18 @@ h5 Search
             input#cmc(type='text', required='')
     .col-md-8
         label Type
-            input#type(type='text', required='')
+            select#type
+                option(value='') Any
+                option(value='artifact') Artifact
+                option(value='creature') Creature
+                option(value='enchantment') Enchantment
+                option(value='instant') Instant
+                option(value='land') Land
+                option(value='phenomenon') Phenomenon
+                option(value='plane') Plane
+                option(value='planeswalker') Planeswalker
+                option(value='scheme') Scheme
+                option(value='sorcery') Sorcery
+                option(value='tribal') Tribal
+                option(value='vanguard') Vanguard
                 
