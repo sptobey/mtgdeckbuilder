@@ -1,0 +1,8 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Cards
+            input#card.form-control(type='text', required='')
+    .col-md-4
+        button.btn.btn-primary(onClick='cards.searchByName($("#card").val())') Search

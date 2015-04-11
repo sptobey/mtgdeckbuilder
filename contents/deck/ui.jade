@@ -1,0 +1,8 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Games
+            input#game.form-control(type='text', required='')
+    .col-md-4
+        button.btn.btn-primary(onClick='games.listGames($("#game").val())') Search

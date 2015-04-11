@@ -1,0 +1,46 @@
+h3 Results
+table.table.table-striped
+    thead
+        tr
+            th= ""
+            th Title
+            th Description
+            th Score
+            th Platforms
+            th Publisher
+    tbody
+        
+        style.
+            game {
+                font-size: 24px;
+                color: #000000;
+            }
+        style.
+            misc {
+                font-size: 14px;
+                color: #000000;
+            }
+        style.
+            scr {
+                font-size: 20px;
+                color: #000000;
+            }
+        
+        each item in data
+            tr
+                td
+                    img(src=item.thumb)
+                td
+                    b
+                        game= item.title
+                td
+                    misc= item.short_description
+                td
+                    b
+                        scr= item.score
+                td
+                    each pf in item.platforms
+                        li
+                            misc= pf
+                td
+                    misc= item.publisher
