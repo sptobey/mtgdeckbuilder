@@ -18,14 +18,21 @@ var cards = {
         });
     },
     
-    searchByName: function(name) {
+    onProcess: function(check){
+        return check[0].checked
+    },
+    
+    searchByName: function(name, white) {
         $.ajax({
             type:"GET",
             //"http://api.mtgdb.info/search/" + name
             url: "https://api.deckbrew.com/mtg/cards?name=" + name,
             success: function(data) {
                 if (data){
-                    console.log("SearchData: ", data);
+                    //console.log(data);
+                        console.log(name)
+                        console.log(cards.onProcess(white))
+                        console.log("SearchData: ", data);
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
                         var html = jade.render(template, {
                             data: data
