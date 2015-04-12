@@ -8,7 +8,9 @@ table.table.table-striped
             each edition in item.editions
                 tr
                     if edition.multiverse_id > 0
-                        img(src="https://api.mtgdb.info/content/hi_res_card_images/" + edition.multiverse_id + ".jpg", height=280)
+                        button.btn.btn-primary(onClick='decks.thinger()')
+                            img(src="https://api.mtgdb.info/content/hi_res_card_images/" + edition.multiverse_id + ".jpg", height=280)
+                            
 
 
 

@@ -2490,8 +2490,8 @@ Alternate buttons
 .btn-primary,
 .btn-primary:focus {
   color: #ffffff;
-  background-color: #6d5cae;
-  border-color: #6d5cae;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary.active,
 .btn-primary:active,
@@ -2499,8 +2499,8 @@ Alternate buttons
 .btn-primary:active:focus,
 .btn-primary:active:hover,
 .open .dropdown-toggle.btn-primary {
-  background-color: #584b8d;
-  border-color: #584b8d;
+  background-color: #E3BD06;
+  border-color: #E3BD06;
   color: #ffffff;
 }
 .btn-primary.hover,
@@ -2511,8 +2511,8 @@ Alternate buttons
   color: #ffffff;
 }
 .btn-primary.active:hover {
-  background: #5e4f96;
-  border-color: #5e4f96;
+  background: #E3BD06;
+  border-color: #E3BD06;
 }
 .btn-primary.disabled,
 .btn-primary[disabled],
