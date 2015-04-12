@@ -1,5 +1,75 @@
 div.panel
-    label Instruction Videos
+    html
+      body
+        #slideshow-wrap
+          input#button-1(type='radio', name='controls', checked='checked')
+          label(for='button-1')
+          input#button-2(type='radio', name='controls')
+          label(for='button-2')
+          input#button-3(type='radio', name='controls')
+          label(for='button-3')
+          input#button-4(type='radio', name='controls')
+          label(for='button-4')
+          input#button-5(type='radio', name='controls')
+          label(for='button-5')
+          label#arrow-1.arrows(for='button-1') >
+          label#arrow-2.arrows(for='button-2') >
+          label#arrow-3.arrows(for='button-3') >
+          label#arrow-4.arrows(for='button-4') >
+          label#arrow-5.arrows(for='button-5') >
+          #slideshow-inner
+            ul
+              li#slide1
+                img(src='http://cssdeck.com/uploads/media/items/3/3yiC6Yq.jpg')
+                .description
+                  input#show-description-1(type='checkbox')
+                  label.show-description-label(for='show-description-1') I
+                  .description-text
+                    h2 Flower power
+                    p
+                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              li#slide2
+                img(src='http://cssdeck.com/uploads/media/items/4/40Ly3VB.jpg')
+                .description
+                  input#show-description-2(type='checkbox')
+                  label.show-description-label(for='show-description-2') I
+                  .description-text
+                    h2 Golden sunset
+                    p
+                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              li#slide3
+                img(src='http://cssdeck.com/uploads/media/items/0/00kih8g.jpg')
+                .description
+                  input#show-description-3(type='checkbox')
+                  label.show-description-label(for='show-description-3') I
+                  .description-text
+                    h2 Flower power again
+                    p
+                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              li#slide4
+                img(src='http://cssdeck.com/uploads/media/items/2/2rT2vdx.jpg')
+                .description
+                  input#show-description-4(type='checkbox')
+                  label.show-description-label(for='show-description-4') I
+                  .description-text
+                    h2 Stormy coast
+                    p
+                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+              li#slide5
+                img(src='http://cssdeck.com/uploads/media/items/8/8k3N3EL.jpg')
+                .description
+                  input#show-description-5(type='checkbox')
+                  label.show-description-label(for='show-description-5') I
+                  .description-text
+                    h2 Splash!
+                    p
+                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+
+
+
+
+    <label> Instruction Videos </label>
+
     div.row
         iframe(width='560', height='315', src='https://www.youtube.com/embed/GadqHggATe8', frameborder='0', allowfullscreen='')
     div.row
