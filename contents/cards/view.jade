@@ -5,8 +5,10 @@ table.table.table-striped
             th
     tbody
         each item in data
-            tr
-                img(src="https://api.mtgdb.info/content/hi_res_card_images/" + item.editions[0].multiverse_id + ".jpg", height=280)
+            each edition in item.editions
+                tr
+                    if edition.multiverse_id > 0
+                        img(src="https://api.mtgdb.info/content/hi_res_card_images/" + edition.multiverse_id + ".jpg", height=280)
 
 
 
