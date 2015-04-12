@@ -5,7 +5,7 @@ h5 Search
             label Cards
             input#card.form-control(type='text', required='')
     .col-md-4
-        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#colorless").on(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
+        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#format").val(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
 .row
     .col-md-1
         label White  
@@ -26,7 +26,7 @@ h5 Search
 .row
     .col-md-4
         label Format
-            select#type
+            select#format
                 option(value='') Any
                 option(value='standard') Standard
                 option(value='legacy') Legacy

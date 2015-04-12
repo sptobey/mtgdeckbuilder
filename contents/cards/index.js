@@ -22,7 +22,7 @@ var cards = {
         return check[0].checked
     },
     
-    searchByName: function(name, white, blue, black, red, green, type) {
+    searchByName: function(name, white, blue, black, red, green, format, type, supertype, cmc, rarity) {
         
         var query = "https://api.deckbrew.com/mtg/cards";
         var isFirst = true;
@@ -87,6 +87,15 @@ var cards = {
             }
             query = query + "color=" + "green";
         }
+        if(format) {
+            if(isFirst) {
+                query = query + "?";
+                isFirst = false;
+            } else {
+                query = query + "&";
+            }
+            query = query + "format=" + format;
+        }
         if(type) {
             if(isFirst) {
                 query = query + "?";
@@ -96,19 +105,33 @@ var cards = {
             }
             query = query + "type=" + type;
         }
+        if(supertype) {
+            if(isFirst) {
+                query = query + "?";
+                isFirst = false;
+            } else {
+                query = query + "&";
+            }
+            query = query + "supertype=" + supertype;
+        }
+        if(rarity) {
+            if(isFirst) {
+                query = query + "?";
+                isFirst = false;
+            } else {
+                query = query + "&";
+            }
+            query = query + "rarity=" + rarity;
+        }
         
-        console.log("cmc: ", cmc);
         console.log("Query: ", query);
         
         $.ajax({
             type:"GET",
             //"http://api.mtgdb.info/search/" + name
-            url: "https://api.deckbrew.com/mtg/cards?name=" + name,
+            url: query,
             success: function(data) {
                 if (data){
-                    //console.log(data);
-                    console.log(name)
-                    console.log(cards.onProcess(white) , cards.onProcess(blue) , cards.onProcess(black))
                     console.log("SearchData: ", data);
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
                         var html = jade.render(template, {
