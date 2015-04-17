@@ -1,7 +1,7 @@
 div.panel
     html
-      body
-        #slideshow-wrap.ani.swing
+      body.animatedParent
+        #slideshow-wrap.animated.swing
           input#button-1(type='radio', name='controls', checked='checked')
           label(for='button-1')
           input#button-2(type='radio', name='controls')
@@ -67,8 +67,8 @@ div.panel
 
 
 
-
-        #paper
+                     
+        #paper.animated.bounceInDown
             #paper_top
                 #paper_bottom
                   #paper_header
@@ -96,6 +96,10 @@ div.panel
 
                         <script src="style/VideoLightBox_videolb/jquery.tools.min.js" type="text/javascript"></script>
                         <script src="style/VideoLightBox_videolb/videolightbox.js" type="text/javascript"></script>
+                        
+                        
+script(src='style/css3-animate-it-master/js/css3-animate-it.js', type='text/javascript')             
+
                     
 
 
