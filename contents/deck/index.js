@@ -1,5 +1,16 @@
 var deck = {
 
+    cards: [],
+
+    initCards: function() {
+        deck.cards = [];
+    },
+
+    addCard: function(theCard) {
+        deck.cards.push(theCard);
+        console.log("deck.cards: ", deck.cards);
+    },
+
     getCards: function() {
         $.ajax({
             url: "https://api.mtgdb.info/cards/random",
@@ -48,6 +59,7 @@ var deck = {
         })
         
         // list all cards
+        deck.initCards();
         deck.getCards();
     }
 }
