@@ -1,13 +1,8 @@
-h3 Results
+h3 Deck List
 table.table.table-striped
     thead
         tr
-            th= ""
-            th Title
-            th Description
-            th Score
-            th Platforms
-            th Publisher
+            th Test
     tbody
         
         style.
@@ -29,18 +24,4 @@ table.table.table-striped
         each item in data
             tr
                 td
-                    img(src=item.thumb)
-                td
-                    b
-                        game= item.title
-                td
-                    misc= item.short_description
-                td
-                    b
-                        scr= item.score
-                td
-                    each pf in item.platforms
-                        li
-                            misc= pf
-                td
-                    misc= item.publisher
+                    game= "zing"
