@@ -9,10 +9,7 @@ table.table.table-striped
                 tr
                     if edition.multiverse_id > 0
                         script.
-                            console.log(!{JSON.stringify(item)});
-                        button.btn.btn-primary(onClick='deck.addCard(!{JSON.stringify(item)})')
+                            var card = !{JSON.stringify(item)};
+                            //console.log("Card object: ", card);
+                        button.btn.btn-primary(onClick='deck.addCard(card)')
                             img(src="https://api.mtgdb.info/content/hi_res_card_images/" + edition.multiverse_id + ".jpg", height=280)
-                            
-
-
-
