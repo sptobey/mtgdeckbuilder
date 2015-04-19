@@ -10,14 +10,22 @@ var deck = {
         var card_and_id = 
             {
                 "card_obj": card,
-                "img_id": cardEditionObj.multiverse_id
+                "mult_id": cardEditionObj.multiverse_id
             }
         deck.cards.push(card_and_id);
         console.log("Card Added.  deck.cards: ",deck.cards);
     },
 
     removeCard: function(card) {
-        var foo = "bar";
+        var len = deck.cards.length;
+        for(var i = 0; i < len; i++) {
+            if(deck.cards[i].mult_id == card.mult_id) {
+                deck.cards.splice(i, 1);
+                break;
+            }
+        }
+        // re-display the cards
+        deck.viewDeck();
     },
 
     viewDeck: function () {
@@ -78,6 +86,6 @@ var deck = {
         
         // list all cards
         deck.viewDeck();
-        console.log("load deck.cards: ",deck.cards);
+        console.log("Load Deck. deck.cards: ",deck.cards);
     }
 }
