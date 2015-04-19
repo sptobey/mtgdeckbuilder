@@ -6,18 +6,36 @@ var deck = {
         deck.cards = [];
     },
 
-    addCard: function(theCard) {
-        deck.cards.push(theCard);
-        console.log("deck.cards: ", deck.cards);
+    addCard: function(card, cardEditionObj) {
+        var card_and_id = 
+            {
+                "card_obj": card,
+                "img_id": cardEditionObj.multiverse_id
+            }
+        deck.cards.push(card_and_id);
+        console.log("Card Added.  deck.cards: ",deck.cards);
     },
 
-    getCards: function() {
+    removeCard: function(card) {
+        var foo = "bar";
+    },
+
+    viewDeck: function () {
+        $.get("/mtgdeckbuilder/deck/view.jade", function(template) {
+            var html = jade.render(template, {
+                data: deck.cards
+            })
+            $("#list").html(html)
+        })
+    },
+
+    getRandom: function() {
         $.ajax({
             url: "https://api.mtgdb.info/cards/random",
             success: function(data) {
                 console.log("Data:", data);
                 if(data) {
-                    $.get("/mtgdeckbuilder/deck/list.jade", function(template) {
+                    $.get("/mtgdeckbuilder/deck/view.jade", function(template) {
                         var html = jade.render(template, {
                             data: data
                         })
@@ -59,7 +77,7 @@ var deck = {
         })
         
         // list all cards
-        deck.initCards();
-        deck.getCards();
+        deck.viewDeck();
+        console.log("load deck.cards: ",deck.cards);
     }
 }

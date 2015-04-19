@@ -2,16 +2,13 @@ h3 Deck View
 table.table.table-striped
     thead
         tr
-            th Name
+            th
     tbody
-        
-        style.
-            ty {
-                font-size: 20px;
-                color: #000000;
-            }
-        
-        tr
-            td
-                b
-                    test= "foo"
+        each item in data
+            tr
+                if item.img_id > 0
+                    script.
+                        var card = !{JSON.stringify(item.card_obj)};
+                        //console.log("Card object: ", card);
+                    button.btn.btn-primary(onClick='deck.removeCard(card)')
+                        img(src="https://api.mtgdb.info/content/hi_res_card_images/" + item.img_id + ".jpg", height=280)
