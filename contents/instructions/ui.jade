@@ -1,84 +1,106 @@
 div.panel
     html
       body
-        #slideshow-wrap
-          input#button-1(type='radio', name='controls', checked='checked')
-          label(for='button-1')
-          input#button-2(type='radio', name='controls')
-          label(for='button-2')
-          input#button-3(type='radio', name='controls')
-          label(for='button-3')
-          input#button-4(type='radio', name='controls')
-          label(for='button-4')
-          input#button-5(type='radio', name='controls')
-          label(for='button-5')
-          label#arrow-1.arrows(for='button-1') >
-          label#arrow-2.arrows(for='button-2') >
-          label#arrow-3.arrows(for='button-3') >
-          label#arrow-4.arrows(for='button-4') >
-          label#arrow-5.arrows(for='button-5') >
-          #slideshow-inner
-            ul
-              li#slide1
-                img(src='http://cssdeck.com/uploads/media/items/3/3yiC6Yq.jpg')
-                .description
-                  input#show-description-1(type='checkbox')
-                  label.show-description-label(for='show-description-1') I
-                  .description-text
-                    h2 Flower power
-                    p
-                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              li#slide2
-                img(src='http://cssdeck.com/uploads/media/items/4/40Ly3VB.jpg')
-                .description
-                  input#show-description-2(type='checkbox')
-                  label.show-description-label(for='show-description-2') I
-                  .description-text
-                    h2 Golden sunset
-                    p
-                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              li#slide3
-                img(src='http://cssdeck.com/uploads/media/items/0/00kih8g.jpg')
-                .description
-                  input#show-description-3(type='checkbox')
-                  label.show-description-label(for='show-description-3') I
-                  .description-text
-                    h2 Flower power again
-                    p
-                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              li#slide4
-                img(src='http://cssdeck.com/uploads/media/items/2/2rT2vdx.jpg')
-                .description
-                  input#show-description-4(type='checkbox')
-                  label.show-description-label(for='show-description-4') I
-                  .description-text
-                    h2 Stormy coast
-                    p
-                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-              li#slide5
-                img(src='http://cssdeck.com/uploads/media/items/8/8k3N3EL.jpg')
-                .description
-                  input#show-description-5(type='checkbox')
-                  label.show-description-label(for='show-description-5') I
-                  .description-text
-                    h2 Splash!
-                    p
-                      | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        .animatedParent
+          #slideshow-wrap.animated.swing
+            input#button-1(type='radio', name='controls', checked='checked')
+            label(for='button-1')
+            input#button-2(type='radio', name='controls')
+            label(for='button-2')
+            input#button-3(type='radio', name='controls')
+            label(for='button-3')
+            input#button-4(type='radio', name='controls')
+            label(for='button-4')
+            input#button-5(type='radio', name='controls')
+            label(for='button-5')
+            label#arrow-1.arrows(for='button-1') >
+            label#arrow-2.arrows(for='button-2') >
+            label#arrow-3.arrows(for='button-3') >
+            label#arrow-4.arrows(for='button-4') >
+            label#arrow-5.arrows(for='button-5') >
+            #slideshow-inner
+              ul
+                li#slide1
+                  img(src='http://magic.wizards.com/sites/mtg/files/images/featured/EN_WhatIsMagic_Header_0.jpg')
+                  .description
+                    input#show-description-1(type='checkbox')
+                    label.show-description-label(for='show-description-1') I
+                    .description-text
+                      h2 Flower power
+                      p
+                        | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                li#slide2
+                  img(src='http://magic.wizards.com/sites/mtg/files/images/featured/EN_Duels2015_Header.jpg')
+                  .description
+                    input#show-description-2(type='checkbox')
+                    label.show-description-label(for='show-description-2') I
+                    .description-text
+                      h2 Golden sunset
+                      p
+                        | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                li#slide3
+                  img(src='http://magic.wizards.com/sites/mtg/files/images/featured/EN_PlayLocal_InlineL_A.jpg')
+                  .description
+                    input#show-description-3(type='checkbox')
+                    label.show-description-label(for='show-description-3') I
+                    .description-text
+                      h2 Flower power again
+                      p
+                        | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                li#slide4
+                  img(src='http://magic.wizards.com/sites/mtg/files/images/featured/EN_OrganizedPlay_Header.jpg')
+                  .description
+                    input#show-description-4(type='checkbox')
+                    label.show-description-label(for='show-description-4') I
+                    .description-text
+                      h2 Stormy coast
+                      p
+                        | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                li#slide5
+                  img(src='http://magic.wizards.com/sites/mtg/files/images/featured/EN_Community_Header_4.jpg')
+                  .description
+                    input#show-description-5(type='checkbox')
+                    label.show-description-label(for='show-description-5') I
+                    .description-text
+                      h2 Splash!
+                      p
+                        | Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
 
 
 
+        .animatedParent             
+          #paper.animated.bounceInDown
+              #paper_top
+                  #paper_bottom
+                    #paper_header
+                      <h2 style="position: relative; top: -150px;"> Instruction Videos </h2>
 
-    <label> Instruction Videos </label>
+                    #paper_content
+                      div.row
+                          <div class="videogallery">
+                          
+                            
 
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/GadqHggATe8', frameborder='0', allowfullscreen='')
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/mCGJ_UUtS1Q', frameborder='0', allowfullscreen='')
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/Jik47gv8dn4', frameborder='0', allowfullscreen='')
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/qoO0fFAVXzE', frameborder='0', allowfullscreen='')
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/fG3eXBccyWg', frameborder='0', allowfullscreen='')
-    div.row
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/5FTAbftngf0', frameborder='0', allowfullscreen='')
+                          <a class="voverlay" href="http://www.youtube.com/v/GadqHggATe8?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 1: Welcome to the Multiverse"><img src="style/VideoLightBox_videolb/thumbnails/0.png" alt="Learn to Play Magic: The Gathering, Part 1: Welcome to the Multiverse" /><span></span></a>
+
+                          
+                          <a class="voverlay" href="http://www.youtube.com/v/mCGJ_UUtS1Q?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 2: The Five Colors of Mana"><img src="style/VideoLightBox_videolb/thumbnails/1.png" alt="Learn to Play Magic: The Gathering, Part 2: The Five Colors of Mana" /><span></span></a>
+
+                          
+                          <a class="voverlay" href="http://www.youtube.com/v/Jik47gv8dn4?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 3: Game Zones and Parts of a Card"><img src="style/VideoLightBox_videolb/thumbnails/2.png" alt="Learn to Play Magic: The Gathering, Part 3: Game Zones and Parts of a Card" /><span></span></a>
+
+                          
+                          <a class="voverlay" href="http://www.youtube.com/v/qoO0fFAVXzE?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 4: Card Types"><img src="style/VideoLightBox_videolb/thumbnails/3.png" alt="Learn to Play Magic: The Gathering, Part 4: Card Types" /><span></span></a>
+                          <a class="voverlay" href="http://www.youtube.com/v/fG3eXBccyWg?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 5: Parts of a Turn"><img src="style/VideoLightBox_videolb/thumbnails/4.png" alt="Learn to Play Magic: The Gathering, Part 5: Parts of a Turn" /><span></span></a>
+                          <a class="voverlay" href="http://www.youtube.com/v/5FTAbftngf0?autoplay=1&rel=0&enablejsapi=1&playerapiid=ytplayer" title="Learn to Play Magic: The Gathering, Part 6: The Next Step"><img src="style/VideoLightBox_videolb/thumbnails/5.png" alt="Learn to Play Magic: The Gathering, Part 6: The Next Step" /><span></span></a><span class="videolb"><a href="http://videolightbox.com">Embed Video Website</a> by VideoLightBox.com v3.0m</span>
+                          </div>
+
+                          <script src="style/VideoLightBox_videolb/jquery.tools.min.js" type="text/javascript"></script>
+                          <script src="style/VideoLightBox_videolb/videolightbox.js" type="text/javascript"></script>
+                        
+                        
+script(src='style/css3-animate-it-master/js/css3-animate-it.js', type='text/javascript')             
+
+                    
+
+

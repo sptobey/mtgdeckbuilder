@@ -35,6 +35,43 @@ Generated From LESS
 29. Print
 30. Demo
 -------------------------------------------------------------------*/
+/*over write*/
+
+.container{
+  width: 1100px;
+
+}
+
+
+/*paper design*/
+#paper{
+  background: url("http://www.dhcards.com/images/paper_middle.png") repeat-y center top;
+  width: 620px;
+  position: relative;
+  top: 50px;
+  margin-top: 150px;
+}
+
+#paper_top {
+  background: transparent url(../img/paper_top.jpg) top center no-repeat;
+  position: relative;
+  top: -120px;
+}
+
+#paper_bottom {
+  background: transparent url("http://www.dhcards.com/images/paper_bottom_noshadow.png") no-repeat center bottom;
+  position: relative;
+  top: 230px;
+  min-height: 450px;
+  height: auto !important;
+  height: 500px;
+}
+
+#paper_header{
+  text-align: center;
+}
+
+
 /*------------------------------------------------------------------
 [1. Layouts]
 */
