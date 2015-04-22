@@ -28,6 +28,15 @@ var deck = {
         deck.viewDeck();
     },
 
+    resetDeck: function(event) {
+        if(deck.cards != []) {
+            if(confirm("Reset Deck?")) {
+                deck.cards = [];
+                deck.viewDeck();
+            }
+        }
+    },
+
     viewDeck: function () {
         $.get("/mtgdeckbuilder/deck/view.jade", function(template) {
             var html = jade.render(template, {
