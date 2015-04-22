@@ -43,16 +43,56 @@ var deck = {
             function(card) {
                 var rarity = card.card_edition.rarity;
                 var sortRarity = 0;
-                if(rarity == "mythic") {
+                if(rarity === "mythic") {
                     sortRarity = 1;
-                } else if(rarity == "rare") {
+                } else if(rarity === "rare") {
                     sortRarity = 2;
-                } else if(rarity == "uncommon") {
+                } else if(rarity === "uncommon") {
                     sortRarity = 3;
-                } else if(rarity == "common") {
+                } else if(rarity === "common") {
                     sortRarity = 4;
                 }
                 return sortRarity;
+            }
+        );
+        deck.viewDeck();
+    },
+
+    sortByCmc: function() {
+        deck.cards = _.sortBy(deck.cards,
+            function(card) {
+                return card.card_obj.cmc;
+            }
+        );
+        deck.viewDeck();
+    },
+
+    sortByColor: function() {
+        deck.cards = _.sortBy(deck.cards,
+            function(card) {
+                var sortColor = 0;
+                if(card.card_obj.hasOwnProperty("colors")) {
+                    var colors = card.card_obj.colors;
+                    var color_vals = 
+                    {
+                        "white": 1,
+                        "blue": 2,
+                        "black": 3,
+                        "red": 4,
+                        "green": 5
+                    };
+                    // Single Color
+                    sortColor = color_vals[colors[0]];
+                    // Multicolored
+                    for(var i = 1; i < colors.length; i++) {
+                        sortColor = 5 + sortColor + color_vals[colors[i]];
+                    }
+                // Colorless
+                } else {
+                    sortColor = 36;
+                }
+                console.log("Sort color val: ", sortColor);
+                return sortColor;
             }
         );
         deck.viewDeck();
