@@ -7,12 +7,13 @@ var deck = {
     },
 
     addCard: function(card, cardEditionObj) {
-        var card_and_id = 
+        var card_edition_and_id = 
             {
                 "card_obj": card,
+                "card_edition": cardEditionObj,
                 "mult_id": cardEditionObj.multiverse_id
             }
-        deck.cards.push(card_and_id);
+        deck.cards.push(card_edition_and_id);
         console.log("Card Added.  deck.cards: ",deck.cards);
     },
 
@@ -35,6 +36,26 @@ var deck = {
                 deck.viewDeck();
             }
         }
+    },
+
+    sortByRarity: function() {
+        deck.cards = _.sortBy(deck.cards, 
+            function(card) {
+                var rarity = card.card_edition.rarity;
+                var sortRarity = 0;
+                if(rarity == "mythic") {
+                    sortRarity = 1;
+                } else if(rarity == "rare") {
+                    sortRarity = 2;
+                } else if(rarity == "uncommon") {
+                    sortRarity = 3;
+                } else if(rarity == "common") {
+                    sortRarity = 4;
+                }
+                return sortRarity;
+            }
+        );
+        deck.viewDeck();
     },
 
     viewDeck: function () {
