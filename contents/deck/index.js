@@ -87,12 +87,21 @@ var deck = {
                     for(var i = 1; i < colors.length; i++) {
                         sortColor = 5 + sortColor + color_vals[colors[i]];
                     }
-                // Colorless
+                // Colorless or land
                 } else {
                     sortColor = 36;
                 }
-                console.log("Sort color val: ", sortColor);
                 return sortColor;
+            }
+        );
+        deck.viewDeck();
+    },
+
+    sortByType: function() {
+        deck.cards = _.sortBy(deck.cards,
+            function(card) {
+                var sortType = 0;
+                return sortType;
             }
         );
         deck.viewDeck();
