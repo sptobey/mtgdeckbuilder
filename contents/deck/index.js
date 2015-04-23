@@ -153,6 +153,29 @@ var deck = {
         var blob = new Blob([json], {type: "application/json;charset=utf-8"})
         saveAs(blob, "deck.json")
     },
+    
+    loadDeck: function(deckLoaded) {
+        if(!deckLoaded) {
+            alert("No deck uploaded!")
+        }
+        else {
+            var fileInput = document.getElementById('deckLoaded')
+            console.log(fileInput)
+            var file = fileInput.files[0]
+            var fileReader = new FileReader();
+            fileReader.readAsText(file)
+            fileReader.onload = function(e){
+                var newDeck = fileReader.result
+                console.log(file)
+                console.log(newDeck)
+                deck.cards = JSON.parse(newDeck)
+                deck.load()
+            }
+            fileReader.onerror = function(e){
+                alert("Error in loading file")
+            }
+        }
+    },
 
     load: function() {
         $.get("/mtgdeckbuilder/deck/ui.jade", function(template) {
