@@ -147,6 +147,12 @@ var deck = {
             alert(textStatus);
         });
     },
+    
+    saveDeck: function() {
+        var json = JSON.stringify(deck.cards)
+        var blob = new Blob([json], {type: "application/json;charset=utf-8"})
+        saveAs(blob, "deck.json")
+    },
 
     load: function() {
         $.get("/mtgdeckbuilder/deck/ui.jade", function(template) {
