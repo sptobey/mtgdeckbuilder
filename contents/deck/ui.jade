@@ -14,3 +14,12 @@ h5 Deck UI
 .row
     .col-md-4
         button.btn.btn-primary(onClick='deck.sortByColor()') Sort By Color
+.row
+    .col-md-4
+        button.btn.btn-primary(onClick='deck.saveDeck()') Save Deck
+.row
+    .col-md-4
+        Label Upload Deck
+            input#deckLoaded(type='file')
+    .col-md-4
+        button.btn.btn-primary(onClick='deck.loadDeck($("#deckLoaded").val())') Show Uploaded Deck
