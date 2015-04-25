@@ -37,6 +37,16 @@ Generated From LESS
 -------------------------------------------------------------------*/
 /*over write*/
 
+/*#content{
+  background: url("http://magic.wizards.com/sites/mtg/files/images/featured/GB20150424_header.jpg");
+  background-size: cover;
+}*/
+object#voverlay_overlay{
+  width:620px;
+  height:460px;
+}
+
+
 .container{
   width: 1100px;
 
@@ -45,7 +55,9 @@ Generated From LESS
 
 /*paper design*/
 #paper{
-  background: url("http://www.dhcards.com/images/paper_middle.png") repeat-y center top;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(../img/paper_middle.png) repeat-y center top;
   width: 620px;
   position: relative;
   top: 50px;
@@ -59,7 +71,7 @@ Generated From LESS
 }
 
 #paper_bottom {
-  background: transparent url("http://www.dhcards.com/images/paper_bottom_noshadow.png") no-repeat center bottom;
+  background: transparent url(../img/paper_bottom_noshadow.png) no-repeat center bottom;
   position: relative;
   top: 230px;
   min-height: 450px;
@@ -1190,6 +1202,7 @@ body.dashboard .page-container {
 }
 /* Other overides */
 .container-fluid {
+  background: rgba(179 ,126,71,0.18);
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -1777,6 +1790,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  background: url("http://magic.wizards.com/sites/mtg/files/images/featured/GB20150424_header.jpg");
+  background-size: cover;
+
+
   color: #626262;
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 14px;
@@ -5356,6 +5373,8 @@ textarea {
 }
 input[type="radio"],
 input[type="checkbox"] {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1px 0 0;
   line-height: normal;
   cursor: pointer;
