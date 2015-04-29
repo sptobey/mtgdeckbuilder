@@ -135,6 +135,7 @@ var cards = {
         }
         
         console.log("Query: ", query);
+        //console.log("Cmc?: ", !(!cmc));
         
         $.ajax({
             type:"GET",
@@ -142,15 +143,23 @@ var cards = {
             url: query,
             success: function(data) {
                 if (data){
-                    console.log("SearchData: ", data);
+                    console.log("SearchData: ", data.slice(0,3), "etc....");
                         $.get("/mtgdeckbuilder/cards/view.jade", function(template) {
-                        var html = jade.render(template, {
-                            data: data
-                        })
-                        $("#list").html(html)
-                    })
+                            data = (cmc) ? cards.filterByCmc(data, cmc) : data;
+                            var html = jade.render(template, {
+                                data: data
+                            })
+                            $("#list").html(html)
+                        }
+                    )
                 }
             }
+        });
+    },
+
+    filterByCmc: function(cards, cost) {
+        return _.filter(cards, function(card) {
+            return card.cmc == cost;
         });
     },
 
