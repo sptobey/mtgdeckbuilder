@@ -22,7 +22,7 @@ var cards = {
         return check[0].checked
     },
     
-    searchByName: function(name, white, blue, black, red, green, format, type, supertype, cmc, rarity) {
+    searchByName: function(name, white, blue, black, red, green, multicolor, format, type, supertype, cmc, rarity) {
         
         var query = "https://api.deckbrew.com/mtg/cards";
         var isFirst = true;
@@ -86,6 +86,16 @@ var cards = {
                 query = query + "&";
             }
             query = query + "color=" + "green";
+        }
+        // multicolor
+        if(cards.onProcess(multicolor)) {
+            if(isFirst) {
+                query = query + "?";
+                isFirst = false;
+            } else {
+                query = query + "&";
+            }
+            query = query + "multicolor=" + cards.onProcess(multicolor);
         }
         if(format) {
             if(isFirst) {

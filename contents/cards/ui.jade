@@ -5,7 +5,7 @@ h5 Search
             label Cards
             input#card.form-control(type='text', required='')
     .col-md-4
-        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#format").val(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
+        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#multicolor").on(), $("#format").val(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
 .row
     .col-md-1
         label 
@@ -27,6 +27,10 @@ h5 Search
         label
             img(src="style/pages/img/icons/Green_Mana.png")  
             input#green.checkbox(type='checkbox')
+    .col-md-1
+        label
+            img(src="style/pages/img/icons/multicolored_icon.png")  
+            input#multicolor.checkbox(type='checkbox')
     // Because deckbrew is dumb, no colorless
 .row
     .col-md-4
