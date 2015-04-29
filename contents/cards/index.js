@@ -95,7 +95,7 @@ var cards = {
             } else {
                 query = query + "&";
             }
-            query = query + "multicolor=" + cards.onProcess(multicolor);
+            query = query + "multicolor=" + "true";
         }
         if(format) {
             if(isFirst) {
