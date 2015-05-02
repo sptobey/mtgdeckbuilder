@@ -250,7 +250,7 @@ body.dashboard .page-container {
 /* Bootstrap navbar 
 ------------------------------------
 */
-.navbar {
+/*.navbar {
   top: -1px;
 }
 .navbar-nav > li > a {
@@ -273,7 +273,7 @@ body.dashboard .page-container {
 .navbar-toggle {
   border-radius: 0;
   background-color: transparent !important;
-}
+}*/
 /* Main Menu Sidebar 
 ------------------------------------
 */
@@ -4464,7 +4464,7 @@ body > .pgn-wrapper {
 .nav-tabs > li > a .tab-icon {
   margin-right: 6px;
 }
-.nav-tabs ~ .tab-content {
+/*.nav-tabs ~ .tab-content {
   overflow: hidden;
   padding: 15px;
 }
@@ -4493,7 +4493,7 @@ body > .pgn-wrapper {
   -webkit-transform: translate3d(-10%, 0, 0) !important;
   transform: translate3d(-10%, 0, 0) !important;
   -ms-transform: translate(-10%, 0) !important;
-}
+}*/
 .nav-tabs.nav-tabs-left:after,
 .nav-tabs.nav-tabs-right:after {
   border-bottom: 0px;
@@ -4520,17 +4520,17 @@ body > .pgn-wrapper {
 .nav-tabs-simple {
   border-bottom: 0px;
 }
-.nav-tabs-simple:after {
+/*.nav-tabs-simple:after {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   position: relative;
   bottom: 3px;
   z-index: 120;
-}
+}*/
 .nav-tabs-simple > li {
   margin-bottom: 0;
 }
-.nav-tabs-simple > li:after {
+/*.nav-tabs-simple > li:after {
   -webkit-transition: all 0.1s linear 0s;
   transition: all 0.1s linear 0s;
   -webkit-backface-visibility: hidden;
@@ -4541,7 +4541,7 @@ body > .pgn-wrapper {
   content: '';
   z-index: 125;
 }
-.nav-tabs-primary.nav-tabs-simple > li:after {
+*//*.nav-tabs-primary.nav-tabs-simple > li:after {
   background-color: #6d5cae;
 }
 .nav-tabs-success.nav-tabs-simple > li:after {
@@ -4558,17 +4558,17 @@ body > .pgn-wrapper {
 }
 .nav-tabs-info.nav-tabs-simple > li:after {
   background-color: #3b4752;
-}
+}*/
 .nav-tabs-simple > li.active a,
 .nav-tabs-simple > li.active a:hover,
 .nav-tabs-simple > li.active a:focus {
   background-color: transparent;
   border-color: transparent;
 }
-.nav-tabs-simple > li.active:after,
+/*.nav-tabs-simple > li.active:after,
 .nav-tabs-simple > li:hover:after {
   height: 3px;
-}
+}*/
 .nav-tabs-simple.nav-tabs-left:after,
 .nav-tabs-simple.nav-tabs-right:after {
   border-bottom: 0px;
@@ -4787,7 +4787,7 @@ body > .pgn-wrapper {
   background: transparent;
   color: #fff;
 }
-.nav-tabs-fillup > li.active > a:after {
+/*.nav-tabs-fillup > li.active > a:after {
   -webkit-transform: translate3d(0px, 0px, 0px);
   transform: translate3d(0px, 0px, 0px);
   -ms-transform: translate(0px, 0px);
@@ -4873,7 +4873,7 @@ body > .pgn-wrapper {
   -webkit-transform: translate3d(5px, 0, 0px);
   transform: translate3d(5px, 0, 0px);
   -ms-transform: translate(5px, 0);
-}
+}*/
 /* Panel Groups
 ------------------------------------
 */
