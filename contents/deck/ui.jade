@@ -1,19 +1,31 @@
 h5 Deck UI
 .row
-    .col-md-8
-        button.btn.btn-primary(onClick='deck.postTest(event)') PostTest
-.row
     .col-md-4
         button.btn.btn-primary(onClick='deck.resetDeck(event)') Reset Deck
 .row
     .col-md-4
         button.btn.btn-primary(onClick='deck.sortByRarity()') Sort By Rarity
-.row
     .col-md-4
         button.btn.btn-primary(onClick='deck.sortByCmc()') Sort By Cost
-.row
     .col-md-4
         button.btn.btn-primary(onClick='deck.sortByColor()') Sort By Color
+        
+.row
+    .col-md-1
+        button.btn.btn-primary(onClick='deck.addPlains()')
+            img(src="style/pages/img/icons/White_Mana.png")
+    .col-md-1
+        button.btn.btn-primary(onClick='deck.addIsland()')
+            img(src="style/pages/img/icons/Blue_Mana.png")
+    .col-md-1
+        button.btn.btn-primary(onClick='deck.addSwamp()')
+            img(src="style/pages/img/icons/Black_Mana.png")
+    .col-md-1
+        button.btn.btn-primary(onClick='deck.addMountain()')
+            img(src="style/pages/img/icons/Red_Mana.png")
+    .col-md-1
+        button.btn.btn-primary(onClick='deck.addForest()')
+            img(src="style/pages/img/icons/Green_Mana.png")
 .row
     .col-md-4
         button.btn.btn-primary(onClick='deck.saveDeck()') Save Deck
