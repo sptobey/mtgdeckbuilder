@@ -4,103 +4,114 @@ h5 Search
         .form-group.form-group-default
             label Cards
             input#card.form-control(type='text', required='')
-    .col-md-4
-        button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#multicolor").on(), $("#format").val(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())') Search
+    
+            button.btn.btn-primary(onClick='cards.searchByName($("#card").val(), $("#white").on(), $("#blue").on(), $("#black").on(), $("#red").on(), $("#green").on(), $("#multicolor").on(), $("#format").val(), $("#type").val(), $("#supertype").val(), $("#cmc").val(), $("#rarity").val())',style='margin-bottom:15px') Search
 .row
     .col-md-1
         label 
-            img(src="style/pages/img/icons/White_Mana.png") 
+            img(src="style/pages/img/icons/White_Mana.png", style='margin-left: 23px;') 
             input#white.checkbox(type='checkbox')
     .col-md-1
         label 
-            img(src="style/pages/img/icons/Blue_Mana.png")  
+            img(src="style/pages/img/icons/Blue_Mana.png", style='margin-left: 23px;')  
             input#blue.checkbox(type='checkbox')
     .col-md-1
         label
-            img(src="style/pages/img/icons/Black_Mana.png")  
+            img(src="style/pages/img/icons/Black_Mana.png", style='margin-left: 23px;')  
             input#black.checkbox(type='checkbox')
     .col-md-1
         label
-            img(src="style/pages/img/icons/Red_Mana.png")
+            img(src="style/pages/img/icons/Red_Mana.png", style='margin-left: 23px;')
             input#red.checkbox(type='checkbox')
     .col-md-1
         label
-            img(src="style/pages/img/icons/Green_Mana.png")  
+            img(src="style/pages/img/icons/Green_Mana.png", style='margin-left: 23px;')  
             input#green.checkbox(type='checkbox')
     .col-md-1
         label
-            img(src="style/pages/img/icons/multicolored_icon.png")  
+            img(src="style/pages/img/icons/multicolored_icon.png",style='margin-left: 23px;')  
             input#multicolor.checkbox(type='checkbox')
     // Because deckbrew is dumb, no colorless
 .row
+    .col-md-2
+        .papyrus Format
+
     .col-md-4
-        label Format
-            select#format
-                option(value='') Any
-                option(value='standard') Standard
-                option(value='legacy') Legacy
-                option(value='vintage') Vintage
-                option(value='commander') Commander
-                option(value='modern') Modern
+        select#format
+            option(value='') Any
+            option(value='standard') Standard
+            option(value='legacy') Legacy
+            option(value='vintage') Vintage
+            option(value='commander') Commander
+            option(value='modern') Modern
                 
-    .col-md-6
-        label Type
-            select#type
-                option(value='') Any
-                option(value='artifact') Artifact
-                option(value='creature') Creature
-                option(value='enchantment') Enchantment
-                option(value='instant') Instant
-                option(value='land') Land
-                option(value='phenomenon') Phenomenon
-                option(value='plane') Plane
-                option(value='planeswalker') Planeswalker
-                option(value='scheme') Scheme
-                option(value='sorcery') Sorcery
-                option(value='tribal') Tribal
-                option(value='vanguard') Vanguard
+    .col-md-2
+        .papyrus Type
+
+    .col-md-4
+        select#type
+            option(value='') Any
+            option(value='artifact') Artifact
+            option(value='creature') Creature
+            option(value='enchantment') Enchantment
+            option(value='instant') Instant
+            option(value='land') Land
+            option(value='phenomenon') Phenomenon
+            option(value='plane') Plane
+            option(value='planeswalker') Planeswalker
+            option(value='scheme') Scheme
+            option(value='sorcery') Sorcery
+            option(value='tribal') Tribal
+            option(value='vanguard') Vanguard
 .row
+    .col-md-2
+        .papyrus Supertype
+
     .col-md-4
-        label Supertype
-            select#supertype
-                option(value='') Any
-                option(value='basic') Basic
-                option(value='ongoing') Ongoing
-                option(value='snow') Snow
-                option(value='world') World
-    .col-md-4
-        label Converted Mana Cost Filter
-            select#cmc
-                option(value='') Any
-                option(value=0) 0
-                option(value=1) 1
-                option(value=2) 2
-                option(value=3) 3
-                option(value=4) 4
-                option(value=5) 5
-                option(value=6) 6
-                option(value=7) 7
-                option(value=8) 8
-                option(value=9) 9
-                option(value=10) 10
-                option(value=11) 11
-                option(value=12) 12
-                option(value=13) 13
-                option(value=14) 14
-                option(value=15) 15
-                option(value=16) 16
-                option(value=17) 17
-                option(value=18) 18
-                option(value=19) 19
-                option(value=20) 20
-                option(value=1000000) 1000000
+        select#supertype
+            option(value='') Any
+            option(value='basic') Basic
+            option(value='ongoing') Ongoing
+            option(value='snow') Snow
+            option(value='world') World
+
+    .col-md-2
+        .papyrus Converted Mana Cost
+         
+    .col-md-4   
+        select#cmc
+            option(value='') Any
+            option(value=0) 0
+            option(value=1) 1
+            option(value=2) 2
+            option(value=3) 3
+            option(value=4) 4
+            option(value=5) 5
+            option(value=6) 6
+            option(value=7) 7
+            option(value=8) 8
+            option(value=9) 9
+            option(value=10) 10
+            option(value=11) 11
+            option(value=12) 12
+            option(value=13) 13
+            option(value=14) 14
+            option(value=15) 15
+            option(value=16) 16
+            option(value=17) 17
+            option(value=18) 18
+            option(value=19) 19
+            option(value=20) 20
+            option(value=1000000) 1000000
             
 .row
+    .col-md-2
+        .papyrus Rarity
+
     .col-md-4
-        label Rarity
-            select#rarity
-                option(value='') Any
-                option(value='common') Common
-                option(value='uncommon') Uncommon
-                option(value='rare') Rare
-                option(value='mythic') Mythic Rare
+        select#rarity
+            option(value='') Any
+            option(value='common') Common
+            option(value='uncommon') Uncommon
+            option(value='rare') Rare
+            option(value='mythic') Mythic Rare

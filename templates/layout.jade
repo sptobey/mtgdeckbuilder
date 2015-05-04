@@ -18,22 +18,70 @@ html(lang='en')
     link(rel='stylesheet', href='style/css3-animate-it-master/css/animations.css', type='text/css')
     
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="owl.carousel/assets/css/bootstrapTheme.css" rel="stylesheet">
+    <link href="owl.carousel/assets/css/custom.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <link href="owl.carousel/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+  
   body
 
     div.container-fluid
-        h1 mtgdeckbuilder
+        h1(style='font-family: Impact, Charcoal, sans-serif;color: rgb(208, 177, 22);') MTGdeckbuilder
+
         include navbar
 
     div#content
       div.container
         block content
 
+    //Owl Carousel
     
+
+    script(src='owl.carousel/assets/js/jquery-1.9.1.min.js')
+    script(src='owl.carousel/owl-carousel/owl.carousel.js')
+    script.
+      $(document).ready(function() {
+      var owl = $("#owl-demo");
+      owl.owlCarousel({
+      items : 10, //10 items above 1000px browser width
+      itemsDesktop : [1000,5], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+      itemsTablet: [600,2], //2 items between 600 and 0;
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      });
+      // Custom Navigation Events
+      $(".next").click(function(){
+      owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+      owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+      owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+      owl.trigger('owl.stop');
+      })
+      });
+    //script(src='owl.carousel/demo.js')
+    script(src='owl.carousel/assets/js/bootstrap-collapse.js')
+    script(src='owl.carousel/assets/js/bootstrap-transition.js')
+    script(src='owl.carousel/assets/js/bootstrap-tab.js')
+    script(src='owl.carousel/assets/js/google-code-prettify/prettify.js')
+    script(src='owl.carousel/assets/js/application.js')
+
+
     // third-part libraries
-    script(src="http://code.jquery.com/jquery.min.js")
+    //script(src="http://code.jquery.com/jquery.min.js")
     script(src="js/jade.js")
     script(src="js/lodash.min.js")
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    //script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='js/FileSaver.min.js')
     
     
@@ -50,3 +98,4 @@ html(lang='en')
     //animation with scrolling
     //script(src='style/css3-animate-it-master/js/css3-animate-it.js', type='text/javascript')
 
+    
