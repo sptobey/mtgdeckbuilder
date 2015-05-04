@@ -1,5 +1,8 @@
 # mtgdeckbuilder
 
+## View Site
+ - http://sptobey.github.io/mtgdeckbuilder/ 
+
 ## Team
  - Christopher Audette
  - Haoran Fang
