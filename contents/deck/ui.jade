@@ -2,17 +2,11 @@
     .papyrus(style='color: rgb(208, 177, 22); margin-top: 10px; margin-left: 15px;') Deck UI
 .row
     .col-md-2
-        button.btn.btn-primary(onClick='deck.postTest(event)') PostTest
-    .col-md-2
-        button.btn.btn-primary(onClick='deck.resetDeck(event)') Reset Deck
-    .col-md-2
         button.btn.btn-primary(onClick='deck.sortByRarity()') Sort By Rarity
     .col-md-2
         button.btn.btn-primary(onClick='deck.sortByCmc()') Sort By Cost
     .col-md-2
         button.btn.btn-primary(onClick='deck.sortByColor()') Sort By Color
-    .col-md-2
-        button.btn.btn-primary(onClick='deck.saveDeck()') Save Deck       
 .row
     .col-md-1
         button.btn.btn-primary(onClick='deck.addPlains()')
@@ -29,10 +23,15 @@
     .col-md-1
         button.btn.btn-primary(onClick='deck.addForest()')
             img(src="style/pages/img/icons/Green_Mana.png")
-
+.row
+    .col-md-2
+        button.btn.btn-primary(onClick='deck.saveDeck()') Save Deck
+    .col-md-2
+        button.btn.btn-primary(onClick='deck.resetDeck(event)') Reset Deck
 .row
     .col-md-4
         .papyrus(style='color: rgb(208, 177, 22); margin-top: 10px; margin-left: 15px;') Upload Deck
             input#deckLoaded(type='file')
+.row
     .col-md-4
         button.btn.btn-primary(onClick='deck.loadDeck($("#deckLoaded").val())') Show Uploaded Deck
