@@ -14,7 +14,7 @@ var deck = {
                 "mult_id": cardEditionObj.multiverse_id
             }
         deck.cards.push(card_edition_and_id);
-        console.log("Card Added.  deck.cards: ",deck.cards);
+        //console.log("Card Added.  deck.cards: ",deck.cards);
     },
     
     addPlains: function() {
