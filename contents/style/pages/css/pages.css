@@ -1797,7 +1797,7 @@ body {
   background-size: cover;
 
 
-  color: #626262;
+  color: #FFFFFF;
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -1823,7 +1823,7 @@ h6 {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-weight: 300;
-  color: #2c2c2c;
+  color: #FFFFFF;
 }
 h1 {
   font-size: 44px;
@@ -1833,6 +1833,7 @@ h1 {
 h2 {
   font-size: 31px;
   line-height: 40px;
+  color: #000000;
 }
 h3 {
   font-size: 27px;
@@ -5860,6 +5861,7 @@ fieldset[disabled] .form-control {
 }
 .form-group-default .form-control {
   /*border: none;*/
+  margin-right: 20px;
   height: 25px;
   min-height: 25px;
   padding: 0;
