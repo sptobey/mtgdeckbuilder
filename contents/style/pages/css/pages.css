@@ -36,11 +36,14 @@ Generated From LESS
 30. Demo
 -------------------------------------------------------------------*/
 /*over write*/
-
-/*#content{
-  background: url("http://magic.wizards.com/sites/mtg/files/images/featured/GB20150424_header.jpg");
-  background-size: cover;
-}*/
+.papyrus{
+  font-family: Papyrus, fantasy;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.3999996185303px;
+}
 object#voverlay_overlay{
   width:620px;
   height:460px;
@@ -2508,7 +2511,7 @@ hr.dotted {
 }
 .btn:hover {
   background-color: #fafafa;
-  border: 1px solid rgba(98, 98, 98, 0.27);
+  /*border: 1px solid rgba(98, 98, 98, 0.27);*/
 }
 .btn.active {
   border-color: #e6e6e6;
@@ -2560,9 +2563,9 @@ Alternate buttons
 .btn-primary.hover,
 .btn-primary:hover,
 .open .dropdown-toggle.btn-primary {
-  background-color: #8a7dbe;
+  /*background-color: #8a7dbe;
   border-color: #8a7dbe;
-  color: #ffffff;
+  color: #ffffff;*/
 }
 .btn-primary.active:hover {
   background: #E3BD06;
@@ -5776,9 +5779,9 @@ fieldset[disabled] .form-control {
   color: rgba(98, 98, 98, 0.55);
 }
 .form-group-default {
-  background-color: #fff;
+  /*background-color: #fff;*/
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  /*border: 1px solid rgba(0, 0, 0, 0.07);*/
   border-radius: 2px;
   padding-top: 7px;
   padding-left: 12px;
@@ -5856,7 +5859,7 @@ fieldset[disabled] .form-control {
   border-color: rgba(0, 0, 0, 0.1);
 }
 .form-group-default .form-control {
-  border: none;
+  /*border: none;*/
   height: 25px;
   min-height: 25px;
   padding: 0;

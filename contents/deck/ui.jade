@@ -1,104 +1,21 @@
-h5 Deck UI
 .row
-    .col-md-8
+    .papyrus(style='color: rgb(208, 177, 22); margin-top: 10px; margin-left: 15px;') Deck UI
+.row
+    .col-md-2
         button.btn.btn-primary(onClick='deck.postTest(event)') PostTest
-.row
-    .col-md-4
+    .col-md-2
         button.btn.btn-primary(onClick='deck.resetDeck(event)') Reset Deck
-.row
-    .col-md-4
+    .col-md-2
         button.btn.btn-primary(onClick='deck.sortByRarity()') Sort By Rarity
-.row
-    .col-md-4
+    .col-md-2
         button.btn.btn-primary(onClick='deck.sortByCmc()') Sort By Cost
-.row
-    .col-md-4
+    .col-md-2
         button.btn.btn-primary(onClick='deck.sortByColor()') Sort By Color
-.row
-    .col-md-4
+    .col-md-2
         button.btn.btn-primary(onClick='deck.saveDeck()') Save Deck
 .row
     .col-md-4
-        Label Upload Deck
+        .papyrus(style='color: rgb(208, 177, 22); margin-top: 10px; margin-left: 15px;') Upload Deck
             input#deckLoaded(type='file')
     .col-md-4
         button.btn.btn-primary(onClick='deck.loadDeck($("#deckLoaded").val())') Show Uploaded Deck
-
-.row
-    #demo
-      .container
-        .row
-          .span12
-            #owl-demo.owl-carousel
-              .item
-                h1 1
-              .item
-                h1 2
-              .item
-                h1 3
-              .item
-                h1 4
-              .item
-                h1 5
-              .item
-                h1 6
-              .item
-                h1 7
-              .item
-                h1 8
-              .item
-                h1 9
-              .item
-                h1 10
-              .item
-                h1 11
-              .item
-                h1 12
-              .item
-                h1 13
-              .item
-                h1 14
-              .item
-                h1 15
-              .item
-                h1 16
-            .customNavigation
-              a.btn.prev Previous
-              a.btn.next Next
-              a.btn.play Autoplay
-              a.btn.stop Stop
-
-script(src='owl.carousel/assets/js/jquery-1.9.1.min.js')
-script(src='owl.carousel/owl-carousel/owl.carousel.js')
-script.
-  $(document).ready(function() {
-  var owl = $("#owl-demo");
-  owl.owlCarousel({
-  items : 10, //10 items above 1000px browser width
-  itemsDesktop : [1000,5], //5 items between 1000px and 901px
-  itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
-  itemsTablet: [600,2], //2 items between 600 and 0;
-  itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
-  });
-  // Custom Navigation Events
-  $(".next").click(function(){
-  owl.trigger('owl.next');
-  })
-  $(".prev").click(function(){
-  owl.trigger('owl.prev');
-  })
-  $(".play").click(function(){
-  owl.trigger('owl.play',1000);
-  })
-  $(".stop").click(function(){
-  owl.trigger('owl.stop');
-  })
-  });
-//script(src='owl.carousel/demo.js')
-script(src='owl.carousel/assets/js/bootstrap-collapse.js')
-script(src='owl.carousel/assets/js/bootstrap-transition.js')
-script(src='owl.carousel/assets/js/bootstrap-tab.js')
-script(src='owl.carousel/assets/js/google-code-prettify/prettify.js')
-script(src='owl.carousel/assets/js/application.js')
-
-
