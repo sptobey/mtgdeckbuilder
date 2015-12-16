@@ -2,7 +2,7 @@
 
 ## View Site
  - http://sptobey.github.io/mtgdeckbuilder/ 
- - Note that the API used to get card information and card images is no longer working.  As a result our site no longer displays anything interesting.  :(
+ - Changes the API used to get card image information (they are no longer "high-res").
 
 ## Team
  - Christopher Audette
