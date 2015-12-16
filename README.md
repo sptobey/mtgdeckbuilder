@@ -58,3 +58,13 @@ A5: There will be two views; one is a search and add function for the deck you a
 
 Q6: How are the decks saved?
 A6: They are saved and loaded locally as a JSON blob.
+
+## Deploy Notes
+
+$ wintersmith build
+
+$ git add build
+
+$ git commit -m 'build' 
+
+$ git subtree push --prefix build origin gh-pages
