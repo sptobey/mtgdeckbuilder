@@ -2,6 +2,7 @@
 
 ## View Site
  - http://sptobey.github.io/mtgdeckbuilder/ 
+ - Note that the API used to get card information and card images is no longer working.  As a result our site no longer displays anything interesting.  :(
 
 ## Team
  - Christopher Audette
